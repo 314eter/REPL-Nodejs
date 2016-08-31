@@ -121,6 +121,7 @@ class REPLView
             self.setTextEditor(textEditor)
             self.setRepl(new REPLPython(format,self.dealWithRetour))
           else
+            if @grammarName == "OCaml" then @grammarName = "OCaml Toplevel"
             self.setTextEditor(textEditor)
             self.setRepl(new REPL(format,self.dealWithRetour))
           callBackCreate(self,pane)
